@@ -1,0 +1,11 @@
+domain: resset.xyz
+layout: go.kubebuilder.io/v2
+projectName: vsc-kube
+repo: github.com/Ressetkk/vsc-kube
+resources:
+- group: code
+  kind: Workspace
+  version: v1alpha1
+version: 3-alpha
+plugins:
+  go.sdk.operatorframework.io/v2-alpha: {}

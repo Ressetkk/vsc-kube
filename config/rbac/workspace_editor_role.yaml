@@ -1,0 +1,24 @@
+# permissions for end users to edit workspaces.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: workspace-editor-role
+rules:
+- apiGroups:
+  - code.resset.xyz
+  resources:
+  - workspaces
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - code.resset.xyz
+  resources:
+  - workspaces/status
+  verbs:
+  - get
